@@ -1,0 +1,28 @@
+{
+  "name": "docx-tables",
+  "version": "0.1.0",
+  "description": "Node library to extract tables from docx (office open xml) documents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saikksub/node-docx-tables.git"
+  },
+  "keywords": [
+    "docx",
+    "table",
+    "JSON",
+    "office"
+  ],
+  "author": "saikksub <saikksub@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saikksub/node-docx-tables/issues"
+  },
+  "homepage": "https://github.com/saikksub/node-docx-tables#readme",
+  "dependencies": {
+    "jszip": "^3.2.1"
+  }
+}
