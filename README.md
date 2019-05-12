@@ -28,7 +28,7 @@ docxTables({
 | c | d |
 
 A .docx file containing above table will result following JSON output:
-``` JSON
+```
 { '0':
    [ { position: { row: 0, col: 0 }, data: 'a\n' },
      { position: { row: 0, col: 1 }, data: 'b\n' } ],
