@@ -23,6 +23,10 @@
   },
   "homepage": "https://github.com/saikksub/node-docx-tables#readme",
   "dependencies": {
-    "jszip": "^3.2.1"
+    "jszip": "^3.2.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.0.0"
   }
 }
