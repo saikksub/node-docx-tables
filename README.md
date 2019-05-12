@@ -22,10 +22,10 @@ docxTables({
 
 ### Example
 
-| | | |
-|-|-|-|
-| a | b |
-| c | d |
+| | |
+|-|-|
+| a | b
+| c | d
 
 A .docx file containing above table will result following JSON output:
 ```
