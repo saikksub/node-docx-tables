@@ -3,7 +3,7 @@ Node library to extract tables from docx (office open xml) documents
 
 ## Install
 ``` bash
-npm i --save node-docx-tables
+npm i --save docx-tables
 ```
 
 ## Usage
