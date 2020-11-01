@@ -27,7 +27,7 @@ async function loadFile (file) {
  * Main Logic for extracting Table data from XML JSON data
  */
 function parseTables (xmlJsonData) {
-  const result = {}
+  const tables = []
   try {
     let wTable = xmlJsonData['w:document']['w:body']['w:tbl']
     if (wTable) {
@@ -35,6 +35,7 @@ function parseTables (xmlJsonData) {
         wTable = [ wTable ]
       }
       wTable.forEach((wTableItem) => {
+        const result = {}
         const wTableItemRow = wTableItem['w:tr']
         wTableItemRow.forEach((wTableItemRowItem, rowIndex) => {
           const wTableItemRowColumn = wTableItemRowItem['w:tc']
@@ -51,7 +52,7 @@ function parseTables (xmlJsonData) {
                   data += `${wpItem['w:r']['w:t']._text}\n`
                 }
               })
-              if (data) {
+              //if (data) {
                 rowObject.push({
                   position: {
                     row: rowIndex,
@@ -59,22 +60,23 @@ function parseTables (xmlJsonData) {
                   },
                   data 
                 })
-              }
+              //}
             }
             // console.log('++++++++++++++++++')
           })
-          if (rowObject && rowObject.constructor === [].constructor && rowObject.length > 0) {
+          //if (rowObject && rowObject.constructor === [].constructor && rowObject.length > 0) {
             result[`${rowIndex}`] = Object.assign([], rowObject)
-          }
+          //}
           // console.log('==========================')
-        }) 
+        })
+        tables.push(result) 
       })
     }
   } catch (error) {
     return error
   }
 
-  return result
+  return tables
 }
 
 module.exports = function (props) {
