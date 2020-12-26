@@ -27,13 +27,19 @@ docxTables({
 | c | d
 
 A .docx file containing above table will result following JSON output:
-```
-{ '0':
-   [ { position: { row: 0, col: 0 }, data: 'a\n' },
-     { position: { row: 0, col: 1 }, data: 'b\n' } ],
-  '1':
-   [ { position: { row: 1, col: 0 }, data: 'c\n' },
-     { position: { row: 1, col: 1 }, data: 'd\n' } ] }
+``` javascript
+[
+  {
+    '0': [
+      { position: { row: 0, col: 0 }, data: 'a\n' },
+      { position: { row: 0, col: 1 }, data: 'b\n' }
+    ],
+    '1': [
+      { position: { row: 1, col: 0 }, data: 'c\n' },
+      { position: { row: 1, col: 1 }, data: 'd\n' }
+    ]
+  }
+]
 ```
 
 # License
